@@ -1,5 +1,5 @@
 # my solution:
-# Uses two pointers to iterate through array but it's really slow. 
+# Thought process: Brute force by using two pointers to iterate through array to find duplicates
 class Solution(object):
     def containsDuplicate(self, nums):
         """

@@ -1,5 +1,5 @@
 #my solution:
-#uses sort function because it's an anagram and if the letters match up, then its true
+#Brute force: use sort function because it's an anagram and if the letters match up, then its true
 class Solution(object):
     def isAnagram(self, s, t):
         """
