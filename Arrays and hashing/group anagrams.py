@@ -44,6 +44,7 @@ class Solution(object):
                 '''
             res[tuple(count)].append(s) 
             '''
+            we use tule because its immutable so that we can append it to our dictionary
             we append 's' because it's the word itself, if that makes sense
             after it goes through every character, it will append it to the list res
             and if theres no value for res, it will create a new value 
