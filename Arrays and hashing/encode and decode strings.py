@@ -10,6 +10,9 @@ class Solution:
         for s in strs:
             res += str(len(s)) + '#' + s
         return res
+        '''
+        Encoder, turns every string in the array to 5#world3#lol
+        '''
     """
     @param: str: A string
     @return: decodes a single string to a list of strings
@@ -26,3 +29,5 @@ class Solution:
             res.append(str[j + 1 : j + 1 + length])
             i =  j + 1 + length
         return res
+    #iterates over the code, takes the first two numbers and stops and sets it as length
+    # uses length to iterate over numbers till the end and thats the decode method
