@@ -29,4 +29,7 @@ oldToCopy is like a lookup table — it doesn’t store the .next or .random its
 The linked list exists in the copy nodes, which the dictionary points to.
 
 random is its own variable/pointer
+
+.random — it might point to a node we haven’t processed yet.
+which is why we use a dictionary/hashmap
 '''
