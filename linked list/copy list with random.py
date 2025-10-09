@@ -23,3 +23,10 @@ class Solution:
             copy.random = old[cur.random]
             cur = cur.next
         return old[head]
+    
+'''
+oldToCopy is like a lookup table — it doesn’t store the .next or .random itself.
+The linked list exists in the copy nodes, which the dictionary points to.
+
+random is its own variable/pointer
+'''
