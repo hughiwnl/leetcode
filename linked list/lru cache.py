@@ -1,7 +1,7 @@
-class Node:
-    def __init__(self, key, val):
-        self.key, self.val = key, val
-        self.prev = self.next = None
+class Node: # class def
+    def __init__(self, key, val): #takes in key and val
+        self.key, self.val = key, val # sets itself with key and val
+        self.prev = self.next = None # no next no prev, just declares a node. classes are used to make multiple of
 class LRUCache:
 
     def __init__(self, capacity: int):
