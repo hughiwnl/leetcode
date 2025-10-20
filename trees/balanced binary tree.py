@@ -6,22 +6,13 @@
 #         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        balanced = [True]
-
-        def height(root):
+        def dfs(root):
             if not root:
-                return 0
-            
-            left = height(root.left)
-            right = height(root.right)
+                return [True, 0]
 
-            if abs(left - right) > 1:
-                balanced[0] = False
-                return 0
-            
-            return 1 + max(left,right)
-        height(root)
-        return balanced[0]
-    
-# A list is mutable in Python. By using balanced = [True], the nested height function can modify the value of balanced (e.g., balanced[0] = False), and this change will persist outside the height function. This is because the height function modifies the contents of the same list object, not the reference itself.
-# Since balanced is a list (balanced = [True]), its elements are accessed using index notation. The only element in the list, at index 0, stores the boolean value (True or False) that determines whether the binary tree is balanced.
+            left, right = dfs(root.left), dfs(root.right)
+            balanced = (left[0] and 
+                        right[0] and 
+                        abs(left[1] - right[1]) <= 1)
+            return [ balanced, 1 + max(left[1], right[1])]
+        return dfs(root)[0]
