@@ -49,4 +49,10 @@ So in your Trie:
 self.children = {}
 This dictionary holds:
 character → reference to a TrieNode object in memory
+
+cur = cur.children[c]
+you’re not copying the node.
+You’re saying:
+“Follow the pointer stored in children[c] and make cur reference that node’s memory.”
+That’s how the algorithm “moves down” the Trie without duplicating anything.
 '''
