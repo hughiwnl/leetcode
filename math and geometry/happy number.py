@@ -1,6 +1,6 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-       visit = set()
+        visit = set()
 
         while n not in visit:
             visit.add(n)
